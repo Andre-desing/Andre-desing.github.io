@@ -39,7 +39,7 @@
                 </nav>
             </div>
         </header>
-        <section class="hero">
+        <section class="hero"
             <div class="container">
                  <h1>
                     Hola! Soy<strong> Andres Miranda </strong> <br/> Desarollador  <strong>JavaScript</strong> con <br> pasión por la <strong>enseñanza</strong> 
@@ -87,7 +87,7 @@
                     <article class="event">
                         <figure class="event-imageContainer">
                             <div class="flexible-video">
-                                <iframe width="560"height="315" src="https://www.youtube.com/embed/LoKvxCSZw5w" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                <iframe class="youtube-video" width="560" height="315" src="https://www.youtube.com/embed/_tniWgtqj_M" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                             </div>
                             <!-- <img class="event-image" src="images/platzi-conf.jpg" width="500"> -->
                         </figure>
@@ -186,23 +186,6 @@
                      menu.classList.add('is-active');
                 }
             } 
-
-            function validation(event) {
-if (event.matches) {
-burgerButton.addEventListener('click', hideShow);
-} else {
-burgerButton.removeEventListener('click', hideShow);
-}
-}
-validation(ipad); 
-// esta es la línea que no aparece en el video y que hay que escribir
-function hideShow() {
-if (menu.classList.contains('is-active')){
-menu.classList.remove('is-active');
-} else {
-menu.classList.add('is-active');
-}
-}
             </script>
        </body>
 </html>
