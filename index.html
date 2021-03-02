@@ -6,13 +6,23 @@
         <link rel="icon" type="images/png" href="images/favicon.png"/>
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&family=Source+Sans+Pro&display=swap" rel="stylesheet">
+        <!-- <link rel="stylesheet" href="css/media.css" media="screen and (max-width:768px)"/> -->
         <link rel="stylesheet" href="css/estilos.css">
+        <!-- <style>
+            @media screen and (max-width: 768px) {
+                body {
+                    border: 10px solid blue;
+                }
+            }
+        </style> -->
+        <meta name="viewport" content="width-device-width, initial-scale=1">
     </head>
     <body>
+        <i class="icon-menu burger-button" id="burger-menu"></i>
         <header class="header">
             <div class="container">
                 <figure class="logo">
-                    <img src="images/LOGO.png" height="50"> 
+                    <img src="Images/logo.png" height="50" alt="Logo de http://andresmiranda.com" logo  s/> 
                 </figure>
                 <nav class="menu">
                     <ol>
@@ -36,9 +46,10 @@
                 </h1>
                 <img class="hero-image" src="images/hero.jpg" width="500" height="300">
             </div>
-        </section>
+        </section> 
             <section id="portafolio" class="portfolio">
-                <div class="container">
+            </section>
+            <div class="container">
                     <h2>Portafolio (Proyectos desatacados)</h2>
                     <article class="project"> 
                         <div class="project-details">
@@ -49,7 +60,7 @@
                             <p class="project-description">Platzi video fue el resultado de 3 meses de trabajo para crear
                              la mejor app para enseñar el funcionamiento de React y React Native.</p>
                         </div>
-                    <figure class="project-imageCointeiner">
+                    <figure class="project-imageContainer">
                         <img class="project-image" width="500" src="images/platzi-video-react-native.png" alt="proyecto del curso de react native">    
                     </figure>    
                         </article>
@@ -62,20 +73,23 @@
                             <p class="project-description">Platzi video fue el resultado de 3 meses de trabajo para crear
                              la mejor app para enseñar el funcionamiento de React y React Native.</p>
                         </div>
-                    <figure class="project-imageCointeiner">
+                    <figure class="project-imageContainer">
                         <img class="project-image" width="500" src="images/platzi-video-react-native.png" alt="proyecto del curso de react native">    
                     </figure>    
                         </article>
                 </div>
             </section>
-            <div class="container">
+            <div class="container"> 
                 <h2 class="event-list-title">Más sobre mi Experiencia</h2>
-            </div>
+            </div> 
             <section id="eventos" class="event-list">
                 <div class="container">
                     <article class="event">
                         <figure class="event-imageContainer">
-                            <img class="event-image" src="images/platzi-conf.jpg" width="500">
+                            <div class="flexible-video">
+                                <iframe width="560"height="315" src="https://www.youtube.com/embed/LoKvxCSZw5w" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </div>
+                            <!-- <img class="event-image" src="images/platzi-conf.jpg" width="500"> -->
                         </figure>
                         <div class="event-detail">
                             <h3 class="event-title">PlatziConf Mexico 2018</h3>
@@ -85,7 +99,8 @@
                     </article>
                     <article class="event">
                         <figure class="event-imageContainer">
-                            <img class="event-image" src="images/platzi-conf.jpg" width="500">
+                            <video class="html-video" src="Videos/f8.mp4" width="1280" height="720" controls></video>
+                            <!-- <img class="event-image" src="images/platzi-conf.jpg" width="500"> -->
                         </figure>
                         <div class="event-detail">
                             <h3 class="event-title">PlatziConf Mexico 2018</h3>
@@ -114,10 +129,9 @@
                         </div>
                     </article>
                 </div>
-            </section> 
+            </section>  
             <section id="contacto" class="contact">
                 <div class="container">
-
                     <form action="/suscripcion/" class="form-email">
                        <h3>¿Creamos algo juntos?</h3>
                         <input type="text" placeholder="Déjame tu email" id="email">
@@ -131,7 +145,7 @@
                         <a href="https://instagram.com/leonidasesteban" class="social-link instagram"></a>
                     </div>
                 </div>
-          </section>
+            </section> 
             <footer class="footer">
                 <div class="container">
                     <div>
@@ -139,12 +153,57 @@
                     </div>
                     <div>
                         <p>
-                            Designed with <\3 by <a href="https://twitter.com/">@AndresMiranda</a>
+                            Designed with 💙 by <a href="https://twitter.com/">@AndresMiranda</a>
                         </p>
                     </div>
                 </div>
-            </footer>    
+            </footer> 
+            <script>
+                // console.log('Hola mundo! es mi primera linea en JS');
+                // console.log(document.querySelector('.menu'));
+                // console.log();
+                const ipad = window.matchMedia('screen and (max-width: 768px)')
+                const menu = document.querySelector('.menu');
+                const burgerButton = document.querySelector('#burger-menu')
+                console.log(burgerButton);
+              
+                
+                ipad.addListener(validation)
+                
+                function validation(event) {
+                    if (event.matches) {
+                       burgerButton.addEventListener('click', hideShow)
+                    } else {
+                        burgerButton.removeEventListener('click', hideShow)
+
+                    }
+                }
+
+                function hideShow() {
+                    if (menu.classList.contains('is-active')) {
+                      menu.classList.remove('is-active');
+                    } else {
+                     menu.classList.add('is-active');
+                }
+            } 
+
+            function validation(event) {
+if (event.matches) {
+burgerButton.addEventListener('click', hideShow);
+} else {
+burgerButton.removeEventListener('click', hideShow);
+}
+}
+validation(ipad); 
+// esta es la línea que no aparece en el video y que hay que escribir
+function hideShow() {
+if (menu.classList.contains('is-active')){
+menu.classList.remove('is-active');
+} else {
+menu.classList.add('is-active');
+}
+}
+            </script>
        </body>
 </html>
 
-.
