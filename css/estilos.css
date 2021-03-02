@@ -164,7 +164,7 @@ h2 {
     max-width: 100%;
 }
 .header{
-    
+
     background-color: #1b2127;
     color: white;
     display: flex;
@@ -178,29 +178,17 @@ h2 {
     height: inherit;
 }
 
-ol,
-ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-}
 .header ol {
     display: flex;
     height: inherit;
 }
 
-figure {
-    margin: 0;
-}
-
-.header a {
-    color: white;
-    text-decoration: none;
-}
 .header ol li{
     height: inherit;
 }
 .header a {
+    color: white;
+    text-decoration: none ;
     height: inherit;
     display: flex;
     align-items: center;
@@ -223,6 +211,12 @@ figure {
     flex-shrink: 0;
 }
 
+ol,
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
 
  figure{
     margin: 0;
